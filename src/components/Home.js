@@ -11,7 +11,7 @@ function Home() {
     const [memesArr, setMemesArr] = useState([]);
 
     const sendReq = async () => {
-        const serverURL = `http://localhost:3002/allMemes`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/allMemes`;
         const response = await fetch(serverURL);
         const data = await response.json();
         console.log(data)

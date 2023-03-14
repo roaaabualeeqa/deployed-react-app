@@ -8,7 +8,7 @@ function UpdateForm(props) {
     const updateMeme = async (e) => {
         e.preventDefault();
         console.log(e.target);
-        const serverURL = `http://localhost:3002/updatefavMeme/${props.memeData.id}`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/updatefavMeme/${props.memeData.id}`;
         console.log(serverURL)
         const obj = {
             image_path: e.target.image.value, 

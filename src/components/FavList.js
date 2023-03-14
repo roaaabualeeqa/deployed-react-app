@@ -5,7 +5,8 @@ function FavList(){
     
     const [favArr, setFavArr] = useState([]);
     const sendReq = async () => {
-        const serverURL = `http://localhost:3002/favMeme`;
+        console.log(process.env.REACT_APP_serverURL)
+        const serverURL = `${process.env.REACT_APP_serverURL}/favMeme`;
         const response = await fetch(serverURL);
         const data = await response.json();
         console.log(data)
